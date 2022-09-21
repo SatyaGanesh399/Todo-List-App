@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Todo_list() {
+function TodoList() {
   return (
     <div
     className='todo-list'
@@ -11,4 +11,4 @@ function Todo_list() {
   )
 }
 
-export default Todo_list
+export default TodoList
