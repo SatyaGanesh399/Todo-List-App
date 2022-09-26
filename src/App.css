@@ -25,6 +25,7 @@
   margin-top: 20px;
   margin-right: 20px;
   margin-bottom: 10px;
+  
   border: none;
   border-radius: 10px;
   color: black;
@@ -40,10 +41,17 @@
   font-size: 1.1rem;
   border-radius: 5px;
   background-color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
 }
 .cancel-button {
   cursor: pointer;
 }
+input[type=checkbox] {
+  width: 15px;
+  height: 15px;
+  margin-right: 10px;
+}
+
 .todo-title {
   height: 50px;
   position: sticky;
@@ -60,13 +68,24 @@
   background-color: #256D85;
 }
 .todo-list {
-  width: 80%;
+  max-width: 80%;
   margin: 10px auto;
   padding: 6px;
   border-radius: 5px;
-  height: 40px;
+  min-height: 40px;
   background-color: #8FE3CF;
+ 
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+.todo-main-content{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.list-text{
+  width: 250px;
+  text-align: left;
+  word-wrap: break-word;
 }
