@@ -9,6 +9,24 @@
   align-items: center;
   justify-content: center;
 }
+
+.todo-title {
+  height: 50px;
+  position: sticky;
+  top: 0;
+  color: azure;
+  font-weight: 500;
+  font-size: 1.4rem;
+  word-spacing: 8px;
+  letter-spacing: 1.5px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #256D85;
+}
+
+/* App Whole container */
 .todo-app {
   width: 400px;
   height: 400px;
@@ -20,12 +38,13 @@
   width: 10px;
   display: none;
 }
+
+/* input box and submit button*/
 .input-text {
   height: 40px;
   margin-top: 20px;
   margin-right: 20px;
   margin-bottom: 10px;
-  
   border: none;
   border-radius: 10px;
   color: black;
@@ -43,30 +62,20 @@
   background-color: rgba(255, 255, 255, 0.6);
   cursor: pointer;
 }
+
+/* Remove todo button */
 .cancel-button {
   cursor: pointer;
 }
+
+/* mark complate checkbox */
 input[type=checkbox] {
   width: 15px;
   height: 15px;
   margin-right: 10px;
 }
 
-.todo-title {
-  height: 50px;
-  position: sticky;
-  top: 0;
-  color: azure;
-  font-weight: 500;
-  font-size: 1.4rem;
-  word-spacing: 8px;
-  letter-spacing: 1.5px;
-  margin: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #256D85;
-}
+/* Todo content */
 .todo-list {
   max-width: 80%;
   margin: 10px auto;
@@ -74,7 +83,6 @@ input[type=checkbox] {
   border-radius: 5px;
   min-height: 40px;
   background-color: #8FE3CF;
- 
   display: flex;
   align-items: center;
   justify-content: space-between;

@@ -6,16 +6,19 @@ import TodoList from "./TodoList";
 function Todo() {
   const [todos, setTodos] = useState([]);
 
+  // Deleting an item
   function deleteItem(id) {
     setTodos(todos.filter((todo) => todo.id !== id));
   }
 
   const [todoInput, setTodoInput] = useState("");
 
+  // Storing input
   const handleInput = (e) => {
     setTodoInput(e.target.value);
   };
 
+  // After submission
   const handleSubmit = (e) => {
     if (todoInput === "") return;
     setTodos([
@@ -28,6 +31,8 @@ function Todo() {
     ]);
     setTodoInput("");
   };
+
+  // Marking the task completed
   function markComplete(id){
     let markedElement = todos.find(item => item.id === id)
     let updatedTodos = todos.filter(item => item.id!==id)
@@ -51,9 +56,11 @@ function Todo() {
         placeholder="input task"
         onChange={handleInput}
       />
+
       <button type="button" className="submit-button" onClick={handleSubmit}>
         Add
       </button>
+    {/* Mapping over items in the list */}
       {todos.map((todo) => (
         <TodoList
           text={todo.text}

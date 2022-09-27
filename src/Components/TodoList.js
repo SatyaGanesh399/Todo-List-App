@@ -1,12 +1,16 @@
 import React from "react";
 
 function TodoList(props) {
+  // Delete function takes the id to further process in the Todo.js
   function handleDelete() {
     props.deleteItem(props.id);
   }
+  // mark Complete function takes the id to further process in the Todo.js
   function handleCheckbox() {
     props.markComplete(props.id);
   }
+
+  
   return (
     <div className="todo-list" key={props.key}>
       <div className="todo-main-content">
@@ -18,6 +22,9 @@ function TodoList(props) {
           onClick={handleCheckbox}
           
         />
+
+        {/* if task is completed it should appear as striked text */}
+
         {!props.isCompleted ? (
           <span className="list-text">{props.text}</span>
         ) : (
@@ -25,6 +32,7 @@ function TodoList(props) {
             <strike>{props.text}</strike>
           </span>
         )}
+
       </div>
       <span
         className="material-symbols-outlined cancel-button"
